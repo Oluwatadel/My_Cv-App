@@ -243,7 +243,7 @@ export default function App() {
       id: 9,
       title: 'Blue Node Foundation',
       description: 'NGO foundation website — bluenodefoundation.org',
-      img: 'assets/img/hero-bg.jpg',
+      img: 'assets/img/Bluenode.jpg',
       category: 'web',
       link: 'https://bluenodefoundation.org',
       details: 'Designed and developed the official website for Blue Node Foundation, an NGO, with AI assistance. Features clean, accessible design focused on the organisation\'s mission and outreach.',
@@ -374,10 +374,10 @@ export default function App() {
       <main className="main">
         {/* Hero Section */}
         <section id="hero" className="hero section light-background">
-          <img src="assets/img/hero-bg.jpg" alt="Hero background" />
+          <img src="assets/img/DSC00151.png" alt="Hero background" />
           <div className="container" data-aos="zoom-out">
-            <div className="row justify-content-center">
-              <div className="col-lg-9 text-center text-md-start">
+            <div className="row">
+              <div className="col-lg-7 col-xl-6 text-start">
                 <h2>Adelesi Oluwatobi Gabriel</h2>
                 <p>
                   I'm a{' '}
@@ -390,7 +390,7 @@ export default function App() {
                   <a href="https://github.com/Oluwatadel" target="_blank" rel="noopener noreferrer">
                     <i className="bi bi-github"></i>
                   </a>
-                  <a href="https://linkedin.com/in/oluwatobi-adelesi-gabriel" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/oluwatobi-adelesi-a02063266 " target="_blank" rel="noopener noreferrer">
                     <i className="bi bi-linkedin"></i>
                   </a>
                   <a href="mailto:oluwatobiadelesi@gmail.com">
@@ -862,7 +862,7 @@ export default function App() {
             <a href="https://github.com/Oluwatadel" target="_blank" rel="noopener noreferrer">
               <i className="bi bi-github"></i>
             </a>
-            <a href="https://linkedin.com/in/oluwatobi-adelesi-gabriel" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/oluwatobi-adelesi-a02063266 " target="_blank" rel="noopener noreferrer">
               <i className="bi bi-linkedin"></i>
             </a>
           </div>

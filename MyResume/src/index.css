@@ -14,34 +14,35 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --heading-font: "Playfair Display", Georgia, "Times New Roman", serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
-/* Global Colors */
-:root { 
-  --background-color: #ffffff;
-  --default-color: #272829;
-  --heading-color: #45505b;
-  --accent-color: #0563bb;
+/* Global Colors — Classic Navy & Gold */
+:root {
+  --background-color: #f8f5ef;
+  --default-color: #2c2c2c;
+  --heading-color: #1a2744;
+  --accent-color: #1a2744;
+  --gold-color: #b8960c;
   --surface-color: #ffffff;
   --contrast-color: #ffffff;
 }
 
-/* Nav Menu Colors */
+/* Nav Menu Colors — Dark sidebar with gold hover */
 :root {
-  --nav-color: #45505b;
-  --nav-hover-color: #0563bb;
-  --nav-mobile-background-color: #ffffff;
-  --nav-dropdown-background-color: #ffffff;
-  --nav-dropdown-color: #212529;
-  --nav-dropdown-hover-color: #0563bb;
+  --nav-color: #c8c2b4;
+  --nav-hover-color: #b8960c;
+  --nav-mobile-background-color: #1a2744;
+  --nav-dropdown-background-color: #1a2744;
+  --nav-dropdown-color: #c8c2b4;
+  --nav-dropdown-hover-color: #b8960c;
 }
 
 /* Color Presets */
 .light-background {
-  --background-color: #f9f9f9;
+  --background-color: #f0ebe0;
   --surface-color: #ffffff;
 }
 
@@ -175,6 +176,10 @@ h1, h2, h3, h4, h5, h6 {
   .header~main .hero {
     margin-left: -200px;
     width: 100vw;
+  }
+  /* Push hero content right of the sidebar */
+  .header~main .hero .container {
+    padding-left: 220px;
   }
 }
 
@@ -483,21 +488,24 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #1a2744;
 }
 
 .hero img {
   position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
+  right: 0;
+  top: 0;
   height: 100%;
+  width: auto;
+  max-width: 55%;
   object-fit: cover;
+  object-position: top center;
   z-index: 1;
 }
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: linear-gradient(to right, #1a2744 200px, rgba(26, 39, 68, 0.35) 380px, transparent 560px);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -512,16 +520,18 @@ section,
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  color: #ffffff;
 }
 
 .hero p {
   margin: 5px 0 0 0;
   font-size: 26px;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .hero p span {
   letter-spacing: 1px;
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--gold-color);
 }
 
 .hero .social-links {
@@ -531,14 +541,14 @@ section,
 .hero .social-links a {
   font-size: 20px;
   display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: rgba(255, 255, 255, 0.75);
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
 }
 
 .hero .social-links a:hover {
-  color: var(--accent-color);
+  color: var(--gold-color);
 }
 
 @media (max-width: 768px) {
@@ -1021,6 +1031,139 @@ section,
 }
 
 .soft-skill-tag:hover {
-  background: var(--accent-color);
+  background: var(--gold-color);
+  border-color: var(--gold-color);
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Classic Theme — Sidebar, Gold Accents, Serif Polish
+--------------------------------------------------------------*/
+
+/* Dark navy sidebar on all screen sizes */
+.header {
+  background-color: #1a2744;
+  border-right: none;
+}
+
+@media (max-width: 1199px) {
+  .header {
+    background-color: #1a2744;
+    border-right: none;
+  }
+}
+
+/* Nav items on dark sidebar */
+.navmenu a,
+.navmenu a:focus {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--nav-color);
+}
+
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus,
+.navmenu li:hover > a {
+  background: rgba(184, 150, 12, 0.2);
+  color: var(--gold-color);
+}
+
+/* Gold skill progress bars */
+.skills .progress-bar {
+  background-color: var(--gold-color);
+}
+
+/* Gold resume timeline line and dot */
+.resume .resume-item {
+  border-left-color: var(--gold-color);
+}
+
+.resume .resume-item::before {
+  border-color: var(--gold-color);
+}
+
+.resume .resume-item h5 {
+  background: color-mix(in srgb, var(--gold-color), transparent 88%);
+  color: #7a6200;
+}
+
+/* Gold section title underline */
+.section-title h2::after {
+  background: var(--gold-color);
+}
+
+/* Serif polish on section titles */
+.section-title h2 {
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* Gold hero typed underline */
+.hero p span {
+  border-bottom-color: var(--gold-color);
+}
+
+/* Gold Download CV button */
+.hero-download-btn {
+  background: var(--gold-color);
+}
+
+.hero-download-btn:hover {
+  background: color-mix(in srgb, var(--gold-color), transparent 15%);
+  color: #fff;
+}
+
+/* Gold soft skill tags */
+.soft-skill-tag {
+  background: color-mix(in srgb, var(--gold-color), transparent 90%);
+  color: #7a6200;
+  border-color: color-mix(in srgb, var(--gold-color), transparent 65%);
+}
+
+/* Gold portfolio overlay */
+.portfolio .portfolio-item .portfolio-info {
+  background: rgba(26, 39, 68, 0.92);
+}
+
+/* Gold scroll-to-top button */
+.scroll-top {
+  background-color: var(--gold-color);
+}
+
+.scroll-top:hover {
+  background-color: color-mix(in srgb, var(--gold-color), transparent 20%);
+}
+
+/* Gold footer social icons */
+.footer .social-links a {
+  background: var(--gold-color);
+}
+
+.footer .social-links a:hover {
+  background: color-mix(in srgb, var(--gold-color), transparent 20%);
+}
+
+/* Warm ivory stats section background */
+.stats i {
+  background-color: var(--gold-color);
+}
+
+/* Contact icon hover */
+.contact .info-item:hover i {
+  background: var(--gold-color);
+}
+
+/* Contact send button */
+.contact .react-email-form button[type=submit] {
+  background: var(--gold-color);
+}
+
+.contact .react-email-form button[type=submit]:hover {
+  background: color-mix(in srgb, var(--gold-color), transparent 20%);
+}
+
+/* Portfolio filter active pill */
+.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li.filter-active {
+  background-color: var(--gold-color);
 }
