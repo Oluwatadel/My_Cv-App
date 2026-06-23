@@ -371,13 +371,17 @@ export default function App() {
         </nav>
       </header>
 
+      {isMobileNavOpen && (
+        <div className="nav-overlay" onClick={() => setIsMobileNavOpen(false)} />
+      )}
+
       <main className="main">
         {/* Hero Section */}
         <section id="hero" className="hero section">
           <div className="container" data-aos="zoom-out">
-            <div className="row align-items-end">
-              <div className="col-lg-6 text-start hero-text">
-                <h2>Adelesi Oluwatobi Gabriel</h2>
+            <div className="row align-items-center align-items-lg-end">
+              <div className="col-lg-6 text-center text-lg-start hero-text order-2 order-lg-1">
+                <h2>Oluwatobi Gabriel Adelesi</h2>
                 <p>
                   I'm a{' '}
                   <span className="typed">
@@ -402,7 +406,7 @@ export default function App() {
                   </a>
                 </div>
               </div>
-              <div className="col-lg-6 text-end d-none d-lg-flex align-items-end justify-content-end">
+              <div className="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-lg-end order-1 order-lg-2 mb-4 mb-lg-0">
                 <img src="assets/img/DSC00151.png" alt="Adelesi Oluwatobi Gabriel" className="hero-portrait" />
               </div>
             </div>
@@ -503,28 +507,28 @@ export default function App() {
         <section id="stats" className="stats section light-background">
           <div className="container" data-aos="fade-up" data-aos-delay="100">
             <div className="row gy-4 text-center">
-              <div className="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+              <div className="col-lg-3 col-md-6 col-6 d-flex flex-column align-items-center">
                 <i className="bi bi-emoji-smile"></i>
                 <div className="stats-item">
                   <CountUp end={8} />
                   <p>Completed Projects</p>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+              <div className="col-lg-3 col-md-6 col-6 d-flex flex-column align-items-center">
                 <i className="bi bi-journal-richtext"></i>
                 <div className="stats-item">
                   <CountUp end={2} />
                   <p>Production Deployments</p>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+              <div className="col-lg-3 col-md-6 col-6 d-flex flex-column align-items-center">
                 <i className="bi bi-clock"></i>
                 <div className="stats-item">
                   <CountUp end={3} />
                   <p>Years Experience</p>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+              <div className="col-lg-3 col-md-6 col-6 d-flex flex-column align-items-center">
                 <i className="bi bi-award"></i>
                 <div className="stats-item">
                   <CountUp end={2} />
